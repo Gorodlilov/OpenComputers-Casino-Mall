@@ -23,10 +23,8 @@ if settings.PAYMENT_METHOD == 'CHEST' then
     casino.container = component.chest
     containerSize = casino.container.getInventorySize()
 elseif settings.PAYMENT_METHOD == 'PIM' then
-    if component.pim ~= nil then
-    casino.container = component.pim
-    containerSize = 40
-    end
+    casino.container = component.chest
+    containerSize = casino.container.getInventorySize()
 end
 
 casino.splitString = function(inputStr, sep)
